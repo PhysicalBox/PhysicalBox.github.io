@@ -16,27 +16,6 @@ body {
     padding: 0;
 }
 
-nav {
-    padding: 5px;
-    overflow: hidden;
-    text-align: center;
-    background-color: var(--GRIS-OSCURO);
-    box-shadow: 0 4px 8px 0 var(--DARK);
-}
-
-nav>a {
-    /* Link style = no */
-    color: var(--LIGTH);
-    text-decoration: none;
-    /* Nav elements*/
-    padding: 30px;
-    display: inline;
-}
-
-nav>a:hover {
-    color: var(--EMPHASIS);
-}
-
 .sticky {
     top: 0;
     width: 100%;
@@ -44,9 +23,35 @@ nav>a:hover {
 }
 
 
-/* For desktop: */
+/* Desktop: */
 
 @media only screen and (min-width: 768px) {
+    /* -------------- CONFIGURACIÓN DEL NAV -------------- */
+    nav {
+        padding: 5px;
+        overflow: hidden;
+        text-align: center;
+        background-color: var(--GRIS-CLARO);
+        box-shadow: 0 4px 8px 0 var(--DARK);
+        opacity: 0.8;
+    }
+    nav:hover {
+        opacity: 1;
+    }
+    nav>a {
+        /* Link style = no */
+        color: var(--LIGTH);
+        text-decoration: none;
+        /* Nav elements*/
+        padding: 30px;
+        display: inline;
+        letter-spacing: 3px;
+    }
+    nav>a:hover {
+        color: var(--EMPHASIS);
+        text-decoration: underline;
+    }
+    /* -------------- HEADER -------------- */
     header {
         padding: 30px;
         height: 300px;
@@ -59,12 +64,15 @@ nav>a:hover {
         /* Fonts- definitions*/
         color: var(--DARK);
         font-family: 'Patua One', cursive;
-        text-align: center;
         font-size: xx-large;
+        text-align: center;
         letter-spacing: 10px;
+        -webkit-text-stroke: 0.5px;
+        -webkit-text-stroke-color: #fff;
+        text-shadow: 3px 5px 2px #474747;
         /* The background image */
         background-color: var(--GRIS-CLARO);
-        background-image: url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fmarkaphone.com%2Ffondo-blanco-png%2F&psig=AOvVaw21GCjsdXkhJ65GTeU8hbRS&ust=1608251079119000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJDVo6rg0-0CFQAAAAAdAAAAABAH);
+        background-image: url(https://lh3.googleusercontent.com/yyW78c1l1HmOsD52c0v-H6mK15nx8P-l2nRnI1trJzUkQL3l4zEL5mh1_S1raH0Jqau5yxMoK7GDAoEhxZlyCUKt9D6-zh1rvcESmdRJLKjb0G-JfFC8i5LKxsxXobgawjOd-t7ptAQf2LmbQS5GdcRPyClj8Nq5VzDuyPyprPU5L6q3t0oR_ZfX7OkbNMMayL4q62ORqNo8Jee27EH6cCvx5KF6hnVIoWPsqk6_drn3GpqiQJcpojxzFsffLLrkkl5Ph6QtHw0wnJYFm1awTtktywyrXxIRFB8uwb9jC8VqyLa8_kbMd4yCai46omxvI4rIlGxlzU1DqzF-LOWfG8M4K6-uPz0dfKOq8i-_EiZA8H-MgBBYzP8XJ4sLbInQ6ayNNRNou_u2mU0f9WvLfkr5Z-SDJi3ckd2WM-C7Oi4Pz6KS6rf89ePIJVGQGmqhDPm8IEJ7RWmnSdvKiZrey-6d5ExXBRVPo_lJczHHVlfTW7nd1kQyozSOqxDoufBC0M8U8S949v11wnGU-Yn33YRyOWPEZXKvhSQoWPiS2nZro8QqQLV3ubLYAi-Hrpr1bljgTMfMxzDginAaVBBja1jIFu3wSLG9kltgI4usODokRQhVWBWisUEFPdZYvj21GKouJKqyyzgy2SODTYBHGXnGTuahOaYi8E52NR_T1MzwtTsU3vJtFDT6qjs=w1366-h488-no?authuser=0);
         background-repeat: no-repeat, repeat;
         background-size: cover;
     }
@@ -73,8 +81,10 @@ nav>a:hover {
         padding: 30px;
         width: 80%;
     }
+    /* -------------- PROJECT PREVIEW --------------*/
     section {
         padding: 20px;
+        border: 2px solid transparent;
         border-radius: 30px;
         background-color: var(--GRIS-OSCURO);
         box-shadow: 0 4px 8px 0 var(--DARK);
@@ -82,6 +92,7 @@ nav>a:hover {
     }
     section:hover {
         transform: scale(1.01);
+        border: 2px solid var(--EMPHASIS);
         box-shadow: 0 8px 16px 0 var(--DARK);
     }
     .card {
@@ -95,13 +106,39 @@ nav>a:hover {
     .column {
         box-sizing: border-box;
         float: left;
+        padding: 10px;
         width: 50%;
     }
     .column>* {
         box-sizing: border-box;
-        text-align: justify;
-        padding: 10px;
         width: 100%;
+    }
+    .column>img {
+        border: 1px solid var(--LIGTH);
+    }
+    /*-------------- FOOTER --------------*/
+    footer {
+        display: flex;
+        color: var(--DARK);
+        background-color: var(--GRIS-CLARO);
+        margin-top: 30px;
+        font-weight: bold;
+    }
+    footer>div {
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+        padding: 30px;
+        min-width: 25%;
+    }
+    footer>div>* {
+        display: block;
+        padding: 5px;
+        margin: 0;
+    }
+    footer>div>a {
+        color: var(--LIGTH);
+        font-weight: lighter;
     }
 }
 
@@ -109,15 +146,52 @@ nav>a:hover {
 /* mobile phones */
 
 @media only screen and (max-width: 768px) {
-    /* Header */
-    header {
-        padding-top: 30px;
-        padding-bottom: 10px;
-        margin: auto;
+    /* -------------- CONFIGURACIÓN DEL NAV -------------- */
+    nav {
+        display: none;
+        padding: 5px;
+        text-align: center;
         background-color: var(--GRIS-CLARO);
+    }
+    nav:hover {
+        opacity: 1;
+    }
+    nav>a {
+        /* Link style = no */
         color: var(--LIGTH);
+        text-decoration: none;
+        /* Nav elements*/
+        padding: 10px;
+        display: block;
+        letter-spacing: 3px;
+    }
+    /* -------------- HEADER -------------- */
+    header {
+        display: flex;
+        width: 100%;
+        padding: 10px;
+        color: var(--LIGTH);
+        background-color: var(--GRIS-CLARO);
         font-family: 'Patua One', cursive;
         text-align: center;
+    }
+    header>* {
+        display: inline-block;
+        box-sizing: border-box;
+        margin: auto;
+    }
+    #openNav {
+        transition: 0.4s;
+    }
+    #openNav>* {
+        width: 35px;
+        height: 5px;
+        background-color: var(--LIGTH);
+        margin: 6px 0;
+    }
+    .spin {
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
     }
     main {
         margin: auto;
@@ -145,13 +219,37 @@ nav>a:hover {
     }
     .column {
         box-sizing: border-box;
-        float: left;
-        width: 50%;
+        width: 100%;
     }
     .column>* {
         box-sizing: border-box;
-        text-align: justify;
         padding: 10px;
         width: 100%;
+    }
+    footer {
+        color: var(--DARK);
+        background-color: var(--GRIS-CLARO);
+        width: 100%;
+        margin-top: 30px;
+        font-weight: bolder;
+    }
+    footer>div {
+        text-align: center;
+        width: 100%;
+        margin: auto;
+        box-sizing: border-box;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+    footer>div>* {
+        display: block;
+        padding: 5px;
+        margin: 0;
+    }
+    footer>div>a {
+        color: var(--LIGTH);
+        font-weight: lighter;
     }
 }
