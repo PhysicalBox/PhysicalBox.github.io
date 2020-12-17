@@ -1,13 +1,17 @@
 :root {
+    --GRIS-CLARO: #5e65a1;
+    /* Color claro */
     --LIGTH: #f1f6f9;
-    --GRIS-CLARO: #9ba4b4;
-    --GRIS-OSCURO: #394867;
-    --DARK: #14274e;
-    --EMPHASIS: #ee6f57;
+    /* Azul de las tarjetas */
+    --GRIS-OSCURO: #2b2e4a;
+    /* Azul del fondo */
+    --DARK: #131420;
+    --EMPHASIS: #ff4646;
 }
 
 body {
-    background-color: var(--LIGTH);
+    font-family: 'Karma', serif;
+    background-color: var(--DARK);
     margin: 0;
     padding: 0;
 }
@@ -16,78 +20,138 @@ nav {
     padding: 5px;
     overflow: hidden;
     text-align: center;
-    background-color: var(--GRIS-CLARO);
-}
-
-nav>a {
-    padding: 30px;
-    float: center;
-    display: inline;
-    color: var(--DARK);
-    text-decoration: none;
-}
-
-nav>a:hover {
-    text-decoration: underline;
-}
-
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-
-header {
-    padding: 30px;
-    height: 300px;
-    margin: auto;
-    overflow: hidden;
-    text-align: center;
-    background-image: url(https://i.pinimg.com/236x/49/e6/19/49e6195bb7b74257c644a3995450a38d.jpg);
-    background-repeat: no-repeat, repeat;
-    background-size: cover;
-}
-
-main {
-    margin: auto;
-    padding: 30px;
-    width: 80%;
-}
-
-section {
-    display: flex;
-    padding: 20px;
-    background-color: var(--GRIS-CLARO);
-    border-radius: 30px;
-    transition: transform .2s;
+    background-color: var(--GRIS-OSCURO);
     box-shadow: 0 4px 8px 0 var(--DARK);
 }
 
-section:hover {
-    transform: scale(1.01);
-    box-shadow: 0 8px 16px 0 var(--DARK);
-}
-
-section>a {
+nav>a {
+    /* Link style = no */
+    color: var(--LIGTH);
     text-decoration: none;
-    color: var(--DARK);
+    /* Nav elements*/
+    padding: 30px;
+    display: inline;
 }
 
-.card>h2 {
-    text-align: center;
-    box-sizing: border-box;
+nav>a:hover {
+    color: var(--EMPHASIS);
 }
 
-.column {
-    float: left;
-    width: 50%;
-    padding: 10px;
-    height: 300px;
-    /* Should be removed. Only for demonstration */
+.sticky {
+    top: 0;
+    width: 100%;
+    position: fixed;
 }
 
-.card-body:after {
-    content: "";
-    display: table;
-    clear: both;
+
+/* For desktop: */
+
+@media only screen and (min-width: 768px) {
+    header {
+        padding: 30px;
+        height: 300px;
+        margin: auto;
+        overflow: hidden;
+        /* Center the elemet */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* Fonts- definitions*/
+        color: var(--DARK);
+        font-family: 'Patua One', cursive;
+        text-align: center;
+        font-size: xx-large;
+        letter-spacing: 10px;
+        /* The background image */
+        background-color: var(--GRIS-CLARO);
+        background-image: url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fmarkaphone.com%2Ffondo-blanco-png%2F&psig=AOvVaw21GCjsdXkhJ65GTeU8hbRS&ust=1608251079119000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJDVo6rg0-0CFQAAAAAdAAAAABAH);
+        background-repeat: no-repeat, repeat;
+        background-size: cover;
+    }
+    main {
+        margin: auto;
+        padding: 30px;
+        width: 80%;
+    }
+    section {
+        padding: 20px;
+        border-radius: 30px;
+        background-color: var(--GRIS-OSCURO);
+        box-shadow: 0 4px 8px 0 var(--DARK);
+        transition: transform .2s;
+    }
+    section:hover {
+        transform: scale(1.01);
+        box-shadow: 0 8px 16px 0 var(--DARK);
+    }
+    .card {
+        color: var(--LIGTH);
+        text-decoration: none;
+        display: inline-block;
+    }
+    .card>h2 {
+        text-align: center;
+    }
+    .column {
+        box-sizing: border-box;
+        float: left;
+        width: 50%;
+    }
+    .column>* {
+        box-sizing: border-box;
+        text-align: justify;
+        padding: 10px;
+        width: 100%;
+    }
+}
+
+
+/* mobile phones */
+
+@media only screen and (max-width: 768px) {
+    /* Header */
+    header {
+        padding-top: 30px;
+        padding-bottom: 10px;
+        margin: auto;
+        background-color: var(--GRIS-CLARO);
+        color: var(--LIGTH);
+        font-family: 'Patua One', cursive;
+        text-align: center;
+    }
+    main {
+        margin: auto;
+        padding: 30px;
+        width: 80%;
+    }
+    section {
+        padding: 20px;
+        border-radius: 30px;
+        background-color: var(--GRIS-OSCURO);
+        box-shadow: 0 4px 8px 0 var(--DARK);
+        transition: transform .2s;
+    }
+    section:hover {
+        transform: scale(1.01);
+        box-shadow: 0 8px 16px 0 var(--DARK);
+    }
+    .card {
+        color: var(--LIGTH);
+        text-decoration: none;
+        display: inline-block;
+    }
+    .card>h2 {
+        text-align: center;
+    }
+    .column {
+        box-sizing: border-box;
+        float: left;
+        width: 50%;
+    }
+    .column>* {
+        box-sizing: border-box;
+        text-align: justify;
+        padding: 10px;
+        width: 100%;
+    }
 }
