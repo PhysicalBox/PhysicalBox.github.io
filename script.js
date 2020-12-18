@@ -1,11 +1,15 @@
+// Set the last modification date
 document.getElementById("modified").innerHTML = document.lastModified;
-window.onscroll = function() { myFunction() };
 
 const nav = document.getElementById("nav")
-const sticky = nav.offsetTop;
-var openMenu = true;
+var openMenu = true; // On mobile device, is true when the menu is opened
 
-function myFunction() {
+// On dektop device, set the menu fixed
+window.onscroll = function() { fixedMenuBar() };
+const sticky = nav.offsetTop;
+
+// Mobile device: fixed the menu
+function fixedMenuBar() {
     if (window.pageYOffset >= sticky) {
         nav.classList.add("sticky")
     } else {
@@ -13,14 +17,19 @@ function myFunction() {
     }
 }
 
-
+// Desktop device: open-close the menu
 function openNav(elemnt) {
     elemnt.classList.toggle("spin");
-    nav.classList.add("sticky")
     if (openMenu)
         nav.style.display = "block";
     else
         nav.style.display = "none";
 
     openMenu = !openMenu;
+}
+
+// Change the mode (dark <=> ligth) mode
+function changeMode() {
+    let element = document.body;
+    element.classList.toggle("light-Mode");
 }
