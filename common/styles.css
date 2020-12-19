@@ -26,9 +26,6 @@ body {
     background-color: var(--BACKGROUND-COLOR);
     margin: 0;
     padding: 0;
-    /* scroll bar on fire-fox*/
-    scrollbar-width: auto;
-    scrollbar-color: var(--LIGTH) var(--EMPHASIS);
 }
 
 ::selection {
