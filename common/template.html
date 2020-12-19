@@ -3,7 +3,8 @@
 <html lang="es">
 
 <head>
-    <title>PHYSICAL BOX</title>
+    <!-- escribir la sección despues del | -->
+    <title>PHYSICAL BOX | SECTION</title>
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,8 +16,9 @@
         @import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
     </style>
 
-    <link rel="stylesheet" href="common/styles.css">
-    <link rel="stylesheet" href="proyectos-styles.css">
+    <!--Asegurarse de que el link a los estilos este correcto-->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="header.css">
 
     <!-- Font Awesome 5 icons -->
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
@@ -24,41 +26,24 @@
 
 <body class="dark-Mode">
     <header>
-        <h1>PHYSICAL BOX</h1>
+        <!-- escribir la sección despues del | -->
+        <h1>PHYSICAL BOX | sección </h1>
         <div id="openNav" onclick="openNav(this)">
             <div></div>
             <div></div>
             <div></div>
         </div>
     </header>
-
     <nav id="nav">
-        <a href="#"><strong>Proyectos</strong></a>
-        <a href="about">About</a>
-        <a href="blogs">Blogs</a>
+        <!--A la sección actual añadirle la estiqueta strong-->
+        <a href="#">Proyectos</a>
+        <a href="#">About</a>
+        <a href="#">Blogs</a>
         <a onclick="changeMode()" title="Change Mode">Mode</a>
     </nav>
 
     <main>
-        <section>
-            <a href="#" class="card">
-                <h2>Simulador Interactivo de Resorte</h2>
-                <div class="column">
-                    <img src="img/sir-min.png" alt="simulador resorte">
-                </div>
-                <div class="column">
-                    <p><strong><abbr title="Simulador interactivo de Resorte"></abbr></strong> SIR es un simulador del sistema masa-resorte que describe distintos tipos de movimiento: <br></p>
-                    <ol>
-                        <li>Armónico simple</li>
-                        <li>Sobre-amortiguado</li>
-                        <li>Sub-amortiguado</li>
-                        <li>Críticamiente amortiguado</li>
-                        <li>Críticamiente forzado</li>
-                    </ol>
-                    <p>Además, SIR genera las gráficas del movimiento y te permite descargar los datos generados por la simulación. Herramienta ideal para realizar experimentos y laboratorios escolares.</p>
-                </div>
-            </a>
-        </section>
+        <!--Haca se coloca el contenido principal-->
     </main>
 
     <footer>
