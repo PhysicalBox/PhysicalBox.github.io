@@ -44,7 +44,6 @@
         letter-spacing: 10px;
         font-family: 'Patua One', cursive;
         /* font boder */
-        -webkit-text-fill-color: var(--TEXT-COLOR);
         -webkit-text-stroke: 0.5px;
         -webkit-text-stroke-color: #fff;
         text-shadow: 3px 5px 2px #474747;
