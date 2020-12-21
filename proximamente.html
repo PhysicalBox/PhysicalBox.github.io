@@ -17,18 +17,19 @@
     </style>
 
     <!--Asegurarse de que el link a los estilos este correcto-->
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="common/styles.css">
+    <link rel="stylesheet" href="common/header.css">
+    <link rel="stylesheet" href="common/blog.css">
 
     <!-- Font Awesome 5 icons -->
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-    <script src="darkMode.js"></script>
+    <script src="common/darkMode.js"></script>
 </head>
 
 <body class="dark-Mode" onload="darkModeCookie()">
     <header>
         <!-- escribir la sección despues del | -->
-        <h1>PHYSICAL BOX | sección </h1>
+        <h1>PHYSICAL BOX | Simulador </h1>
         <div id="openNav" onclick="openNav(this)">
             <div></div>
             <div></div>
@@ -37,14 +38,20 @@
     </header>
     <nav id="nav">
         <!--A la sección actual añadirle la estiqueta strong-->
-        <a href="#">Proyectos</a>
-        <a href="#">About</a>
-        <a href="#">Blogs</a>
+        <a href="/">Proyectos</a>
+        <a href="/about/">About</a>
+        <a href="/blogs/">Blogs</a>
         <a onclick="changeMode()" title="Change Mode" class="fas">&#xf185;</a>
     </nav>
 
     <main>
-        <!--Haca se coloca el contenido principal-->
+        <div class="blog-header">
+            <h2>¡Estamos trabajando en ello!</h2>
+            <img src="../img/sir-min.png" alt="">
+        </div>
+        <hr>
+
+        <p>Estamos trabajando para traerle este servicio. Este atento a nuestras redes sociales para mas información.</p>
     </main>
     <footer>
         <p>Última actualización: <span id="modified"></span>. ¿Tienes preguntas? ¡Nuestro equipo solucionará tus dudas!. Escríbemos a nuestro correo electrónico o haz una llamada telefónica.</p>

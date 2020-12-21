@@ -17,13 +17,14 @@
 
     <link rel="stylesheet" href="../common/styles.css">
     <link rel="stylesheet" href="../common/header.css">
-    <link rel="stylesheet" href="blog-home.css">
+    <link rel="stylesheet" href="../common/blog-home.css">
 
     <!-- Font Awesome 5 icons -->
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="../common/darkMode.js"></script>
 </head>
 
-<body class="dark-Mode">
+<body class="dark-Mode" onload="darkModeCookie()">
     <header>
         <h1>PHYSICAL BOX | Blogs</h1>
         <div id="openNav" onclick="openNav(this)">
@@ -37,10 +38,33 @@
         <a href="../">Proyectos</a>
         <a href="../about/">About</a>
         <a href="#"><strong>Blogs</strong></a>
-        <a onclick="changeMode()" title="Change Mode">Mode</a>
+        <a onclick="changeMode()" title="Change Mode" class="fas">&#xf185;</a>
     </nav>
 
     <main>
+        <!-- <article>
+            <a class="entraga-blog">
+                <img class="miniature" src="../img/sir-min.png" alt="minuature">
+                <div class="info">
+                    <h2>Titulo del blog</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium vestibulum pharetra. Suspendisse non dolor magna. Nunc sit amet velit urna. Ut dui massa, accumsan quis hendrerit a, lacinia et lectus. Vestibulum ac tincidunt quam.
+                        Nullam consequat mi at molestie finibus. Donec sollicitudin a nulla sit amet malesuada. Praesent pellentesque consequat aliquet.</p>
+                    <p>Nombre(s) del autor(s) <time>2002-06-06</time></p>
+                </div>
+            </a>
+        </article> -->
+
+        <article>
+            <a class="entraga-blog">
+                <img class="miniature" src="../img/reunion.jpg" alt="Primera reunión">
+                <div class="info">
+                    <h2>Primera reunión</h2>
+                    <p>Resumen: Luego de trabajar remotamente durante tres meses por causa de la pandemia, nuestro equipo tuvo su primera reunión presencial.</p>
+                    <p>Autor: Yuli Meza | <time>2020-12-05</time></p>
+                </div>
+            </a>
+        </article>
+
         <article>
             <a class="entraga-blog">
                 <img class="miniature" src="../img/sir-min.png" alt="minuature">
@@ -48,7 +72,7 @@
                     <h2>Titulo del blog</h2>
                     <p>Resumen: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium vestibulum pharetra. Suspendisse non dolor magna. Nunc sit amet velit urna. Ut dui massa, accumsan quis hendrerit a, lacinia et lectus. Vestibulum ac tincidunt
                         quam. Nullam consequat mi at molestie finibus. Donec sollicitudin a nulla sit amet malesuada. Praesent pellentesque consequat aliquet.</p>
-                    <p>Nombre(s) del autor(s) <time>06/06/06</time></p>
+                    <p>Nombre(s) del autor(s) <time>2020-06-06</time></p>
                 </div>
             </a>
         </article>
@@ -58,21 +82,9 @@
                 <img class="miniature" src="../img/sir-min.png" alt="minuature">
                 <div class="info">
                     <h2>Titulo del blog</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium vestibulum pharetra. Suspendisse non dolor magna. Nunc sit amet velit urna. Ut dui massa, accumsan quis hendrerit a, lacinia et lectus. Vestibulum ac tincidunt quam.
-                        Nullam consequat mi at molestie finibus. Donec sollicitudin a nulla sit amet malesuada. Praesent pellentesque consequat aliquet.</p>
-                    <p>Nombre(s) del autor(s) <time>06/06/06</time></p>
-                </div>
-            </a>
-        </article>
-
-        <article>
-            <a class="entraga-blog">
-                <img class="miniature" src="../img/sir-min.png" alt="minuature">
-                <div class="info">
-                    <h2>Titulo del blog</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium vestibulum pharetra. Suspendisse non dolor magna. Nunc sit amet velit urna. Ut dui massa, accumsan quis hendrerit a, lacinia et lectus. Vestibulum ac tincidunt quam.
-                        Nullam consequat mi at molestie finibus. Donec sollicitudin a nulla sit amet malesuada. Praesent pellentesque consequat aliquet.</p>
-                    <p>Nombre(s) del autor(s) <time>06/06/06</time></p>
+                    <p>Resumen: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium vestibulum pharetra. Suspendisse non dolor magna. Nunc sit amet velit urna. Ut dui massa, accumsan quis hendrerit a, lacinia et lectus. Vestibulum ac tincidunt
+                        quam. Nullam consequat mi at molestie finibus. Donec sollicitudin a nulla sit amet malesuada. Praesent pellentesque consequat aliquet.</p>
+                    <p>Nombre(s) del autor(s) <time>2020-06-06</time></p>
                 </div>
             </a>
         </article>

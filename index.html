@@ -20,9 +20,10 @@
 
     <!-- Font Awesome 5 icons -->
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="common/darkMode.js"></script>
 </head>
 
-<body class="dark-Mode">
+<body class="dark-Mode" onload="darkModeCookie()">
     <header>
         <h1>PHYSICAL BOX</h1>
         <div id="openNav" onclick="openNav(this)">
@@ -36,12 +37,12 @@
         <a href="#"><strong>Proyectos</strong></a>
         <a href="about">About</a>
         <a href="blogs">Blogs</a>
-        <a onclick="changeMode()" title="Change Mode">Mode</a>
+        <a onclick="changeMode()" title="Change Mode" class="fas">&#xf185;</a>
     </nav>
 
     <main>
         <section>
-            <a href="#" class="card">
+            <a href="/proximamente.html" class="card">
                 <h2>Simulador Interactivo de Resorte</h2>
                 <div class="column">
                     <img src="img/sir-min.png" alt="simulador resorte">

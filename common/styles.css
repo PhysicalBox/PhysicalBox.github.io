@@ -51,8 +51,6 @@ body {
     /* -------------- CONFIGURACIÓN DEL NAV -------------- */
     nav {
         width: 100%;
-        padding-top: 5px;
-        padding-bottom: 5px;
         display: block;
         overflow: hidden;
         text-align: center;
@@ -63,9 +61,16 @@ body {
     nav:hover {
         opacity: 1;
     }
-    nav>a {
+    nav>a,
+    nav>.fas {
         /* Nav elements*/
-        padding: 30px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border: none;
+        line-height: 1;
+        font-weight: 900;
         display: inline;
         letter-spacing: 3px;
         /* Link style = no */
@@ -90,7 +95,6 @@ body {
     /* Main */
     main {
         margin: auto;
-        padding: 30px;
         width: 80%;
         margin-top: 30px;
         min-height: 40vh;
@@ -132,7 +136,7 @@ body {
         height: 5px;
         border-radius: 30px;
         background-color: var(--TEXT-COLOR);
-        margin: 6px 0;
+        margin: 6px;
     }
     .spin {
         -webkit-transform: rotate(90deg);
@@ -147,7 +151,8 @@ body {
         text-align: center;
         background-color: var(--LEVEL-COLOR);
     }
-    nav>a {
+    nav>a,
+    nav>.fas {
         /* Nav elements*/
         padding-top: 10px;
         padding-bottom: 10px;

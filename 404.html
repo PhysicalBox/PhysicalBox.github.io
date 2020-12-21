@@ -21,9 +21,10 @@
     <!-- Font Awesome 5 icons -->
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <script src="404.js"></script>
+    <script src="common/darkMode.js"></script>
 </head>
 
-<body class="dark-Mode">
+<body class="dark-Mode" onload="darkModeCookie()">
     <header>
         <h1>PHYSICAL BOX | Page no found :( </h1>
         <div id="openNav" onclick="openNav(this)">
@@ -36,7 +37,7 @@
         <a href="/">Proyectos</a>
         <a href="/about/">About</a>
         <a href="/blogs/">Blogs</a>
-        <a onclick="changeMode()" title="Change Mode">Mode</a>
+        <a onclick="changeMode()" title="Change Mode" class="fas">&#xf185;</a>
     </nav>
 
     <main>

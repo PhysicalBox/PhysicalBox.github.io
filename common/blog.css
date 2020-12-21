@@ -27,32 +27,39 @@ main {
     background-color: var(--LIGTH);
     box-shadow: 0 4px 8px 0 var(--DARK);
     border-radius: 5px;
-}
-
-.entraga-blog {
-    cursor: pointer;
-    display: flex;
-    overflow: hidden;
-    width: 100%;
     padding: 20px;
-    margin-top: 10px;
-    margin-bottom: 15px;
-    transition: transform .5s;
-    box-shadow: none;
-    box-sizing: border-box;
 }
 
-.entraga-blog:hover {
-    transform: scale(1.005);
-    box-shadow: 0 4px 8px 0 var(--DARK);
-}
-
-.entraga-blog>* {
-    margin: 10px;
-    box-sizing: border-box;
-}
-
-.miniature {
-    width: 30%;
+img {
+    width: 100%;
     object-fit: cover;
+}
+
+
+/* blog header */
+
+.blog-header {
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.blog-header>h2 {
+    font-size: xx-large;
+    text-align: center;
+    margin: 0;
+}
+
+.blog-info {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.blog-info>* {
+    padding: 10px;
+}
+
+.author-img {
+    width: 50px;
 }

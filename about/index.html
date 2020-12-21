@@ -21,9 +21,10 @@
 
     <!-- Font Awesome 5 icons -->
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src='../common/darkMode.js'></script>
 </head>
 
-<body class="dark-Mode">
+<body class="dark-Mode" onload="darkModeCookie()">
     <header>
         <h1>PHYSICAL BOX | About </h1>
         <div id="openNav" onclick="openNav(this)">
@@ -37,37 +38,39 @@
         <a href="../">Proyectos</a>
         <a href="#"><strong>About</strong></a>
         <a href="../blogs">Blogs</a>
-        <a onclick="changeMode()" title="Change Mode">Mode</a>
+        <a onclick="changeMode()" title="Change Mode" class="fas">&#xf185;</a>
     </nav>
 
     <main>
         <h2>¿Quiénes somos?</h2>
-        <div class="section1">
-            <div class="box">
-                <figure>
-                    <img src="/img/sony.jpg" alt="Sonya Castro">
-                    <figcaption><strong>Sonya Castro</strong><br>Estudiante de Ingeniería de Sistemas <br> Tercer semestre </figcaption>
-                </figure>
-                <div class="hover">
-                    <p>Aquí va una frase</p>
+        <div class="cards-container">
+            <div class="card">
+                <img src="/img/sony.jpg" alt="Sonya Castro">
+                <div class="container">
+                    <h3><b>Sonya Castro</b></h3>
+                    <p>Estudiante de Ingeniería de Sistemas Tercer Semestre</p>
+                    <a href="https://www.instagram.com/s.v_castro/" target="_blank" rel="noopener noreferrer" class="fab fa-instagram" title="Instagram"></a>
+                    <a href="https://github.com/Sonya-c/" target="_blank" rel="noopener noreferrer" class="fab fa-github" title="GitHub"></a>
                 </div>
             </div>
-            <div class="box">
-                <figure>
-                    <img src="/img/yuli.jpg" alt="Yuli Meza">
-                    <figcaption><strong>Yuli Meza</strong><br>Estudiante de Ingeniería de Sistemas <br> Tercer semestre </figcaption>
-                </figure>
-                <div class="hover">
-                    <p>Aquí va una frase</p>
+            <div class="card">
+                <img src="/img/yuli.jpg" alt="Yuli Meza">
+                <div class="container">
+                    <h3><b>Yuli Meza</b></h3>
+                    <p>Estudiante de Ingeniería de Sistemas Tercer Semestre</p>
+                    <a href="https://www.youtube.com/channel/UCVmKPyotpy5OVQBM6N83Fjw?view_as=subscriber" target="_blank" rel="noopener noreferrer" class='fab fa-youtube' title="YouTube"></a>
+                    <a href="https://www.instagram.com/yuli_mezab13/" target="_blank" rel="noopener noreferrer" class="fab fa-instagram" title="Instagram"></a>
+                    <a href="https://github.com/yulimezab/" target="_blank" rel="noopener noreferrer" class="fab fa-github" title="GitHub"></a>
                 </div>
             </div>
-            <div class="box">
-                <figure>
-                    <img src="/img/willi.jpg" alt="William Pérez">
-                    <figcaption><strong>William Pérez</strong><br>Estudiante de Ingeniería de Sistemas <br> Tercer semestre</figcaption>
-                </figure>
-                <div class="hover">
-                    <p>Aquí va una frase</p>
+            <div class="card">
+                <img src="/img/willi.jpg" alt="William Pérez">
+                <div class="container">
+                    <h3><b>William Pérez</b></h3>
+                    <p>Estudiante de Ingeniería de Sistemas Tercer Semestre</p>
+                    <a href="https://www.youtube.com/channel/UCqIHF9l_T_50RK3GMYtlj1w" target="_blank" rel="noopener noreferrer" class='fab fa-youtube' title="YouTube"></a>
+                    <a href="https://www.instagram.com/wil_a_p/" target="_blank" rel="noopener noreferrer" class="fab fa-instagram" title="Instagram"></a>
+                    <a href="https://github.com/wil2611" target="_blank" rel="noopener noreferrer" class="fab fa-github" title="GitHub"></a>
                 </div>
             </div>
         </div>
