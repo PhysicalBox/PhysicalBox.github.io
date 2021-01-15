@@ -1,0 +1,101 @@
+* {
+    --TEXT-COLOR: #f1f6f9;
+    --BACKGROUND-COLOR: #ffffff;
+    --LEVEL-COLOR: #2b2e4a;
+    --SUB-LEVEL-COLOR: #5e65a1;
+    --SUB-LEVEL-COLOR-trans: #5e65a163;
+    --LIGTH: #f1f6f9;
+    --DARK: #131420;
+    --PINK-EMPHASIS: #ff4646;
+    --BLUE-EMPHASIS: #1abb9c;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+main {
+    width: 100%;
+    padding: 20px;
+    /* to avoid width bigger that secrean */
+    box-sizing: border-box;
+}
+
+section {
+    width: 100%;
+    min-height: 200px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 2px solid var(--LEVEL-COLOR);
+    box-shadow: -1px 10px 30px -20px var(--DARK);
+}
+
+
+/*---------   HEADER OF SECTION   ---------*/
+
+.section-header {
+    display: flex;
+    overflow: hidden;
+    border-radius: 2.5px;
+    background-color: var(--SUB-LEVEL-COLOR-trans);
+    /* to avoid width bigger that secrean */
+    box-sizing: border-box;
+}
+
+.section-header>* {
+    margin: 0;
+    color: var(--DARK);
+}
+
+.section-header>h2 {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.section-header>button {
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 0;
+    border: none;
+    border-left: 2px solid var(--LEVEL-COLOR);
+    background-color: var(--PINK-EMPHASIS);
+}
+
+
+/* section header */
+
+.section-main,
+.section-footer {
+    padding: 20px;
+    width: cal(100% - 40px);
+    border-radius: 5px;
+    box-sizing: border-box;
+    /* to avoid width bigger that secrean */
+    box-sizing: border-box;
+}
+
+
+/* Analisis editable area */
+
+.ediable-area {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 2px solid var(--LEVEL-COLOR);
+}
+
+.ediable-area>* {
+    width: 100%;
+    max-width: 100%;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ediable-area>textarea {
+    box-sizing: border-box;
+    padding: 10px;
+}

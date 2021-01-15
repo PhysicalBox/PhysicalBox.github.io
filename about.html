@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <title>PHYSICAL BOX | About</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Aquí va la descripción">
+    <meta name="keywords" content="Simulador, Física, Resorte">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Karma:wght@300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+    </style>
+
+    <link rel="stylesheet" href="CSS/nav.css">
+    <link rel="stylesheet" href="CSS/footer.css">
+    <link rel="stylesheet" href="CSS/main-site.css">
+    <link rel="stylesheet" href="CSS/card.css">
+    
+    <script src="https://kit.fontawesome.com/90f13af5e4.js" crossorigin="anonymous"></script>
+    <script src="JS/darkMode.js"></script>
+</head>
+
+<body class="dark-Mode" onload="darkModeCookie()">
+    <header>
+        <button class="fas fa-hamburger" onclick="openMenu()" id="open-menu-button"></button>
+        <h1>PHYSICAL BOX | About </h1>
+    </header>
+
+    <nav id="menu">
+        <a href="../" class="menu-element">Proyectos</a>
+        <a href="#" class="menu-element"><strong>About</strong></a>
+        <a href="../blogs" class="menu-element">Blogs</a>
+        <a onclick="changeMode()" class="menu-element fas fa-sun" title="Change Mode"></a>
+    </nav>
+
+    <main class="cards-container horizontal">
+        <div class="card">
+            <img src="resource/img/sony.jpg" alt="Sonya Castro">
+            <div class="card-body">
+                <h2><strong>Sonya Castro</strong></h2>
+                <p>Estudiante de Ingeniería de Sistemas Tercer Semestre</p>
+                <a href="https://www.instagram.com/s.v_castro/" target="_blank" rel="noopener noreferrer" class="fab fa-instagram" title="Instagram"></a>
+                <a href="https://github.com/Sonya-c/" target="_blank" rel="noopener noreferrer" class="fab fa-github" title="GitHub"></a>
+            </div> 
+        </div>
+        
+        <div class="card">
+            <img src="resource/img/yuli.jpg" alt="Yuli Meza">
+            <div class="card-body">
+                <h2><strong>Yuli Meza</strong></h2>
+                <p>Estudiante de Ingeniería de Sistemas Tercer Semestre</p>
+                <a href="https://www.youtube.com/channel/UCVmKPyotpy5OVQBM6N83Fjw?view_as=subscriber" target="_blank" rel="noopener noreferrer" class='fab fa-youtube' title="YouTube"></a>
+                <a href="https://www.instagram.com/yuli_mezab13/" target="_blank" rel="noopener noreferrer" class="fab fa-instagram" title="Instagram"></a>
+                <a href="https://github.com/yulimezab/" target="_blank" rel="noopener noreferrer" class="fab fa-github" title="GitHub"></a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="resource/img/willi.jpg" alt="William Pérez">
+            <div class="card-body">
+                <h2><strong>William Pérez</strong></h2>
+                <p>Estudiante de Ingeniería de Sistemas Tercer Semestre</p>
+                <a href="https://www.youtube.com/channel/UCqIHF9l_T_50RK3GMYtlj1w" target="_blank" rel="noopener noreferrer" class='fab fa-youtube' title="YouTube"></a>
+                <a href="https://www.instagram.com/wil_a_p/" target="_blank" rel="noopener noreferrer" class="fab fa-instagram" title="Instagram"></a>
+                <a href="https://github.com/wil2611" target="_blank" rel="noopener noreferrer" class="fab fa-github" title="GitHub"></a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Última actualización: <span id="modified"></span>. ¿Tienes preguntas? ¡Nuestro equipo solucionará tus dudas!. Escríbemos a nuestro correo electrónico o haz una llamada telefónica.</p>
+        <div>
+            <a href="mailto:proyectocmw@gmail.com" title="mail" class="fas fa-mail-bulk"></a>
+            <a href="tel:3043742724" title="Local phone" class="fas fa-phone-alt"></a>
+            <a href="https://www.youtube.com/channel/UCqIHF9l_T_50RK3GMYtlj1w" target="_blank" rel="noopener noreferrer" class='fab fa-youtube' title="YouTube"></a>
+            <a href="https://www.instagram.com/physical.box/" target="_blank" rel="noopener noreferrer" class="fab fa-instagram" title="Instagram"></a>
+            <a href="https://github.com/physicalBox/" target="_blank" rel="noopener noreferrer" class="fab fa-github" title="GitHub"></a>
+        </div>
+    </footer>
+</body>
+
+</html>

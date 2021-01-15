@@ -1,7 +1,4 @@
-console.log("esta vaina funciona");
 
-// 	fas fa-moon
-// Change the mode (dark <=> ligth) mode
 function changeMode() {
     let body = document.body;
     body.classList.toggle("light-Mode");

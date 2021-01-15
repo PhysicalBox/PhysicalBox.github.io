@@ -1,0 +1,119 @@
+.dark-Mode {
+    --TEXT-COLOR: #f1f6f9;
+    --BACKGROUND-COLOR: #131420;
+    /* Nav, header, footer color */
+    --LEVEL-COLOR: #5e65a1;
+    /* OTROS */
+    --LIGTH: #f1f6f9;
+    --DARK: #131420;
+    --EMPHASIS: #ff4646;
+}
+
+.light-Mode {
+    font-weight: bolder;
+    --TEXT-COLOR: #272343;
+    --BACKGROUND-COLOR: #ffffff;
+    /* Nav, header, footer color */
+    --LEVEL-COLOR: #bae8e8;
+    /* OTROS */
+    --LIGTH: #ffffff;
+    --DARK: #272343;
+    --EMPHASIS: #1abb9c;
+}
+
+.card {
+    border: 2px solid transparent;
+    box-shadow: 0 4px 8px 0 var(--DARK);
+    transition: transform .2s;
+    color: var(--DARK);
+    background-color: var(--CARD-COLOR);
+    box-sizing: border-box;
+}
+
+.card:hover {
+    transform: scale(1.005);
+    border: 2px solid var(--EMPHASIS);
+    box-shadow: 0 8px 16px 0 var(--DARK);
+}
+.card>h2 {
+    text-align: center;
+    color: var(--TEXT-COLOR);
+}
+.card>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card > *, .card-body > *{
+    color: var(--TEXT-COLOR)
+}
+.card-body>a {
+    text-decoration: none;
+    color: var(--EMPHASIS);
+    display: inline;
+    font-size: x-large;
+    letter-spacing: 10px;
+}
+
+.vertical > .card {
+    display: inline-block;
+}
+
+/* Desktop: */
+@media only screen and (min-width: 768px) {
+    .horizontal {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .card {
+        margin: 10px;
+    }
+
+    .horizontal > .card {
+        width: 300px;
+        text-align: center;
+        float: left;
+    }
+
+    .column {
+        box-sizing: border-box;
+        float: left;
+        padding: 10px;
+        width: 50%;
+    }
+    .column>* {
+        box-sizing: border-box;
+        width: 100%;
+    }
+    .column>img {
+        border: 2px solid var(--TEXT-COLOR);
+    }
+}
+
+/* mobile phones */
+@media only screen and (max-width: 768px) {
+    .card {
+        width: 100%;
+        margin-bottom: 20px;
+        margin-top: 10px;
+        /* Text definitions*/
+        text-align: center;
+    }
+
+    ol {
+        list-style: none;
+    }
+
+    .column {
+        box-sizing: border-box;
+        width: 100%;
+    }
+    .column>* {
+        box-sizing: border-box;
+        padding: 10px;
+        width: 100%;
+    }
+}

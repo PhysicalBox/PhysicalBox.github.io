@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Simulador</title>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="física, simulador, resorte, laboratorio">
+
+    <link rel="stylesheet" href="../CSS/simulador-menu.css">
+    <link rel="stylesheet" href="../CSS/footer.css">
+    <link rel="stylesheet" href="../CSS/simulador.css">
+    <link rel="stylesheet" href="../CSS/card.css">
+
+    <script src="JavaScript/control-page.js"></script>
+    <script src="https://kit.fontawesome.com/90f13af5e4.js" crossorigin="anonymous"></script>
+   
+</head>
+
+<body>
+    <header>
+        <button class="fas fa-hamburger" onclick="openMenu()" id="open-menu-button"> </button>
+        <div>
+            <h1 contentEditable="true" onkeypress="if (event.key == 'Backspace' || event.key == 'Delete') return true; else return (this.innerText.length <= 50 && event.key != 'Enter')">Título del experimento</h1>
+            <p>Creado por <em contentEditable="true" onkeypress="if (event.key == 'Backspace' || event.key == 'Delete') return true; else return (this.innerText.length <= 50 && event.key != 'Enter')">nombre</em></p>
+        </div>
+    </header>
+
+    <nav id="menu">
+        <ul class="no-list-style">
+            <li class="menu-element"><a href="https://physicalbox.github.io/" target="_blank" class="fas fa-home"> Inicio</a></li>
+
+            <li class="menu-element">Archivo
+                <ul class="sub-menu no-list-style">
+                    <li><a href="/" target="_blank">Nuevo</a></li>
+                    <li>Subir Datos <input type="file" accept=".csv"></li>
+                    <li onclick="">Bajar datos</li>
+                    <li onclick="window.print()">Imprimir</li>
+                </ul>
+            </li>
+
+            <li class="menu-element">View
+                <ul class="sub-menu no-list-style">
+                    <li>
+                        <input type="checkbox" id="check-datos" name="datos" checked onchange="hide(datos)">
+                        <label for="check-datos">Datos</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="check-simulacion" name="simulacion" checked onchange="hide(simulacion)">
+                        <label for="check-simulacion">Animación</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="check-graficas" name="graficas" checked onchange="hide(graficas)">
+                        <label for="check-graficas">Gráficas</label>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" id="check-analisis" name="analisis" checked onchange="hide(analisis)">
+                        <label for="check-analisis">analisis</label>
+                    </li>
+                </ul>
+            </li>
+
+            <li title="Ayuda" class="menu-element"><a href="manual-de-usuario.pdf" target="_blank">Ayuda</a></li>
+
+            <li title="Reportar un bug" class="menu-element">
+                <a href="https://github.com/PhysicalBox/template-simulador/issues/new" target="_blank" class="fas fa-bug"></a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <main>
+        <section id="datos">
+            <div class="section-header">
+                <h2>Datos</h2>
+                <button class="fas fa-minus" onclick="hide(datos)"></button>
+            </div>
+            <div>
+                <div id="datos-entrada"></div>
+                <div id="datos-salida"></div>
+            </div>
+        </section>
+
+        <section id="simulacion">
+            <div class="section-header">
+                <h2>Animación</h2>
+                <button class="fas fa-minus" onclick="hide(simulacion)"></button>
+            </div>
+        </section>
+
+        <section id="graficas">
+            <div class="section-header">
+                <h2>Gráficas</h2>
+                <button class="fas fa-minus" onclick="hide(graficas)"></button>
+            </div>
+            <div id="grafica1"></div>
+            <div id="grafica2"></div>
+            <div id="grafica3"></div>
+        </section>
+
+        <section id="analisis">
+            <div class="section-header">
+                <h2>Análisis</h2>
+                <button class="fas fa-minus" onclick="hide(analisis)"></button>
+            </div>
+            <div class="section-main" id="analisis-main">
+                <div class="ediable-area">
+                    <h3 contenteditable="true"><button onclick="removeClone(this)">X</button> Hipotesis</h3>
+                    <textarea placeholder="Escribe tu Hipotesis inicial acerca del resultado de los experimentos."></textarea>
+                </div>
+                <div class="ediable-area">
+                    <h3 contenteditable="true"><button onclick="removeClone(this)">X</button> Conclusiones</h3>
+                    <textarea placeholder="Escribe un conclusión o un resumen de los resultado obtenido."></textarea>
+                </div>
+            </div>
+            <div class="section-footer">
+                <button onclick="addEditableArea()">Añadir Elemento</button>
+                <button>Visualizar</button>
+            </div>
+        </section>
+    </main>
+
+    <template>
+        <div class="ediable-area">
+            <h3 contenteditable="true"><button onclick="removeClone(this)">X</button> Nuevo elemento</h3>
+            <textarea placeholder="Este es un nuevo elemento."></textarea>
+        </div>
+    </template>
+
+    <footer>
+        <p>¿Tienes preguntas? ¡Nuestro equipo solucionará tus dudas!. Escríbemos a nuestro correo electrónico o haz una llamada telefónica.</p>
+        <div>
+            <a href="mailto:proyectocmw@gmail.com" onmousedown="sonido.play()" title="mail" class="fas fa-mail-bulk"></a>
+            <a href="tel:3043742724" title="Local phone" class="fas fa-phone-alt"></a>
+            <a href="https://www.youtube.com/channel/UCqIHF9l_T_50RK3GMYtlj1w" target="_blank" rel="noopener noreferrer" class='fab fa-youtube' title="YouTube"></a>
+            <a href="https://www.instagram.com/physical.box/" target="_blank" rel="noopener noreferrer" class="fab fa-instagram" title="Instagram"></a>
+            <a href="https://github.com/physicalBox/" target="_blank" rel="noopener noreferrer" class="fab fa-github" title="GitHub"></a>
+        </div>
+    </footer>
+</body>
+
+
+</html>

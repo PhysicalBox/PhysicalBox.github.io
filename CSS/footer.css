@@ -1,0 +1,58 @@
+.dark-Mode {
+    --TEXT-COLOR: #f1f6f9;
+    --BACKGROUND-COLOR: #131420;
+    --LEVEL-COLOR: #5e65a1;
+    --LIGTH: #f1f6f9;
+    --DARK: #131420;
+    --EMPHASIS: #ff4646;
+}
+
+.light-Mode {
+    font-weight: bolder;
+    --TEXT-COLOR: #272343;
+    --BACKGROUND-COLOR: #ffffff;
+    --LEVEL-COLOR: #bae8e8;
+    --LIGTH: #ffffff;
+    --DARK: #272343;
+    --EMPHASIS: #1abb9c;
+}
+footer {
+    width: 100%;
+    color: var(--TEXT-COLOR);
+    background-color: var(--LEVEL-COLOR);
+    text-align: center;
+    margin-top: 30px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+footer>div>a {
+    margin: auto;
+    color: var(--TEXT-COLOR);
+    font-size: xx-large;
+    text-decoration: none;
+    transition: transform .2s;
+    padding: 10px;
+}
+
+footer>div>a:hover {
+    transform: scale(1.1);
+    color: var(--EMPHASIS);
+}
+
+/* Desktop: */
+@media only screen and (min-width: 768px) {
+    footer>* {
+        width: 50%;
+        margin: auto;
+        padding: 10px;
+    }
+    footer>div {display: flex}
+} 
+/* mobile phones */
+
+@media only screen and (max-width: 768px) {
+    footer>div {
+        display: block;
+    }
+}

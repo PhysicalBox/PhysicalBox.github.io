@@ -15,43 +15,41 @@
         @import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
     </style>
 
-    <link rel="stylesheet" href="common/styles.css">
-    <link rel="stylesheet" href="common/header.css">
-    <link rel="stylesheet" href="404.css">
-    <!-- Font Awesome 5 icons -->
-    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-    <script src="404.js"></script>
-    <script src="common/darkMode.js"></script>
+    <link rel="stylesheet" href="CSS/footer.css">
+    <link rel="stylesheet" href="CSS/main-site.css">
+    <link rel="stylesheet" href="CSS/card.css">
+
+    <script src="https://kit.fontawesome.com/90f13af5e4.js" crossorigin="anonymous"></script>
+    <script src="JS/darkMode.js"></script>
 </head>
 
 <body class="dark-Mode" onload="darkModeCookie()">
     <header>
+        <button class="fas fa-hamburger" onclick="openMenu()" id="open-menu-button"></button>
         <h1>PHYSICAL BOX | Page no found :( </h1>
-        <div id="openNav" onclick="openNav(this)">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
     </header>
-    <nav id="nav">
+
+    <nav id="menu">
         <a href="/">Proyectos</a>
-        <a href="/about/">About</a>
+        <a href="/about.html">About</a>
         <a href="/blogs/">Blogs</a>
-        <a onclick="changeMode()" title="Change Mode" class="fas">&#xf185;</a>
+        <a onclick="changeMode()" class="menu-element fas fa-sun" title="Change Mode"></a>
     </nav>
 
-    <main>
-        <h2>Error 404: no se encontro la pagina que buscaba</h2>
+    <main class="vertical">
+        <div class="card">
+            <h2>Error 404: no se encontro la pagina que buscaba</h2>
 
-        <h3>Error de tipeado</h3>
-        <p>Puede que al ingresar una <abbr title="Uniform Resource Locator">URL</abbr> halla ocurrido un error de tipeado o de copiado, le sugerimos confirmar si la dirección que ingresó es correcta</p>
+            <h3>Error de tipeado</h3>
+            <p>Puede que al ingresar una <abbr title="Uniform Resource Locator">URL</abbr> halla ocurrido un error de tipeado o de copiado, le sugerimos confirmar si la dirección que ingresó es correcta</p>
 
-        <h3>¿No encuentras lo que buscas? revisa el mapa del sitio: </h3>
-        <ul>
-            <li> <a href="/">Home: revisa todos nuestros proyectos</a></li>
-            <li> <a href="/about/">About: conoce un poco lo que hay detras de nosotros</a></li>
-            <li> <a href="/blogs/">Blogs: conoce del desarrollo detras de los proyectos y de los que se acercan</a></li>
-        </ul>
+            <h3>¿No encuentras lo que buscas? revisa el mapa del sitio: </h3>
+            <ul >
+                <li> <a class="no-link" href="/">Home: revisa todos nuestros proyectos</a></li>
+                <li> <a class="no-link" href="/about/">About: conoce un poco lo que hay detras de nosotros</a></li>
+                <li> <a class="no-link" href="/blogs/">Blogs: conoce del desarrollo detras de los proyectos y de los que se acercan</a></li>
+            </ul>
+        </div>
     </main>
 
     <footer>
@@ -65,7 +63,6 @@
         </div>
     </footer>
 
-    <script src="common/script.js"></script>
 </body>
 
 </html>

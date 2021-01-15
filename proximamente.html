@@ -4,7 +4,7 @@
 
 <head>
     <!-- escribir la sección despues del | -->
-    <title>PHYSICAL BOX | SECTION</title>
+    <title>PHYSICAL BOX | proximamente</title>
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,43 +16,39 @@
         @import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
     </style>
 
-    <!--Asegurarse de que el link a los estilos este correcto-->
-    <link rel="stylesheet" href="common/styles.css">
-    <link rel="stylesheet" href="common/header.css">
-    <link rel="stylesheet" href="common/blog.css">
+    <link rel="stylesheet" href="CSS/footer.css">
+    <link rel="stylesheet" href="CSS/main-site.css">
+    <link rel="stylesheet" href="CSS/card.css">
 
     <!-- Font Awesome 5 icons -->
-    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-    <script src="common/darkMode.js"></script>
+    <script src="https://kit.fontawesome.com/90f13af5e4.js" crossorigin="anonymous"></script>
+    <script src="JS/darkMode.js"></script>
 </head>
 
 <body class="dark-Mode" onload="darkModeCookie()">
     <header>
-        <!-- escribir la sección despues del | -->
+        <button class="fas fa-hamburger" onclick="openMenu()" id="open-menu-button"></button>
         <h1>PHYSICAL BOX | Simulador </h1>
-        <div id="openNav" onclick="openNav(this)">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
     </header>
-    <nav id="nav">
-        <!--A la sección actual añadirle la estiqueta strong-->
+
+    <nav id="menu">
         <a href="/">Proyectos</a>
-        <a href="/about/">About</a>
+        <a href="/about.html">About</a>
         <a href="/blogs/">Blogs</a>
-        <a onclick="changeMode()" title="Change Mode" class="fas">&#xf185;</a>
+        <a onclick="changeMode()" class="menu-element fas fa-sun" title="Change Mode"></a>
     </nav>
 
-    <main>
-        <div class="blog-header">
-            <h2>¡Estamos trabajando en ello!</h2>
-            <img src="../img/sir-min.png" alt="">
-        </div>
-        <hr>
 
-        <p>Estamos trabajando para traerle este servicio. Este atento a nuestras redes sociales para mas información.</p>
+    <main class="vertical">
+
+        <div class="card">
+            <h2>¡Estamos trabajando en ello!</h2>
+            <p>Estamos trabajando para traerle este servicio. Este atento a nuestras redes sociales para mas información.</p>
+            <img src="resource/img/sir-min.png" alt="">
+        </div>
+
     </main>
+
     <footer>
         <p>Última actualización: <span id="modified"></span>. ¿Tienes preguntas? ¡Nuestro equipo solucionará tus dudas!. Escríbemos a nuestro correo electrónico o haz una llamada telefónica.</p>
         <div>
@@ -63,8 +59,6 @@
             <a href="https://github.com/physicalBox/" target="_blank" rel="noopener noreferrer" class="fab fa-github" title="GitHub"></a>
         </div>
     </footer>
-
-    <script src="common/script.js"></script>
 </body>
 
 </html>

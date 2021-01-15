@@ -1,0 +1,159 @@
+.dark-Mode {
+    --TEXT-COLOR: #f1f6f9;
+    --BACKGROUND-COLOR: #131420;
+    --LEVEL-COLOR: #5e65a1;
+    --CARD-COLOR: #2b2e4a;
+    --LIGTH: #f1f6f9;
+    --DARK: #131420;
+    --EMPHASIS: #ff4646;
+}
+
+.light-Mode {
+    font-weight: bolder;
+    --TEXT-COLOR: #272343;
+    --BACKGROUND-COLOR: #ffffff;
+    --LEVEL-COLOR: #bae8e8;
+    --CARD-COLOR: #e3f6f5;
+    --LIGTH: #ffffff;
+    --DARK: #272343;
+    --EMPHASIS: #1abb9c;
+}
+.no-link {
+    text-decoration: none;
+    color: var(--TEXT-COLOR);
+}
+
+body {
+    font-family: 'Karma', serif;
+    background-color: var(--BACKGROUND-COLOR);
+    margin: 0;
+    padding: 0;
+}
+
+header>button {
+    border: none;
+    cursor: pointer;
+    font-size: xx-large;
+    background-color: transparent;
+    transition: 0s .2s;
+}
+
+::selection {
+    background-color: var(--EMPHASIS);
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--LIGTH);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--EMPHASIS);
+}
+
+#menu {
+    color: var(--TEXT-COLOR);
+    background-color: var(--LEVEL-COLOR);
+    text-align: center;
+    padding: 15px;
+}
+
+#menu > * {
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--TEXT-COLOR);
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+#menu > *:hover { color: var(--EMPHASIS); }
+
+/* Desktop: */
+@media only screen and (min-width: 768px) {
+    main {
+        margin: auto;
+        width: 80%;
+        margin-top: 30px;
+        min-height: 40vh;
+    }
+    header {
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* Fonts- definitions*/
+        text-align: center;
+        color: var(--TEXT-COLOR);
+        font-family: 'Patua One', cursive;
+        background-color: var(--LEVEL-COLOR);
+    }
+
+    header > * {
+        padding: 10px;
+    }
+    header.index {
+        padding: 30px;
+        height: 300px;
+        margin: auto;
+        overflow: hidden;
+        /* Center the elemet */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* Fonts- definitions*/
+        color: var(--DARK);
+        font-size: xx-large;
+        text-align: center;
+        letter-spacing: 10px;
+        font-family: 'Patua One', cursive;
+        /* font boder */
+        -webkit-text-stroke: 0.5px;
+        -webkit-text-stroke-color: #fff;
+        text-shadow: 3px 5px 2px #474747;
+        /* The background image */
+        background-color: var(--LEVEL-COLOR);
+        background-image: url(../resource/img/baner.jpg);
+        background-repeat: no-repeat, repeat;
+        background-size: cover;
+    }
+}
+
+
+/* mobile phones */
+@media only screen and (max-width: 768px) {
+    main {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+        width: 80%;
+    }
+    header {
+        padding: 10px;
+        display: flex;
+        /* Fonts- definitions*/
+        text-align: center;
+        color: var(--TEXT-COLOR);
+        font-family: 'Patua One', cursive;
+        background-color: var(--LEVEL-COLOR);
+    }
+    header>* {
+        display: inline-block;
+        margin: auto;
+    }
+    header.index {
+        padding: 10px;
+        display: flex;
+        /* Fonts- definitions*/
+        text-align: center;
+        color: var(--TEXT-COLOR);
+        font-family: 'Patua One', cursive;
+        background-color: var(--LEVEL-COLOR);
+    }
+    header.index>* {
+        display: inline-block;
+        margin: auto;
+    }
+}
