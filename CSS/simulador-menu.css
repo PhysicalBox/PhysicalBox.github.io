@@ -23,11 +23,12 @@ body {
 header,
 #menu {
     display: flex;
-    overflow: hidden;
     color: var(--TEXT-COLOR);
-    background-color: var(--LEVEL-COLOR);
+    background-color: var(--LEVEL-COLOR) !important;
 }
+
 header {
+    overflow: hidden;
     /* width definitions*/
     width: 100%;
     padding: 10px;
@@ -84,6 +85,12 @@ header>button:active {
 @media only screen and (min-width: 768px) {
     #menu {
         width: 100%;
+        position: -webkit-sticky; /* Safari */  
+        position: sticky;
+        top: 0;
+        left: 0;
+        z-index:1;
+        background:white;
     }
     .menu-element {
         float: left;

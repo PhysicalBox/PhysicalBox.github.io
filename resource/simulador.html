@@ -2,28 +2,28 @@
 <html lang="es">
 
 <head>
-    <title>Simulador</title>
+    <title>Título del experimento</title>
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
+    <meta name="description" content="Simulador">
     <meta name="keywords" content="física, simulador, resorte, laboratorio">
 
-    <link rel="stylesheet" href="../CSS/simulador-menu.css">
-    <link rel="stylesheet" href="../CSS/footer.css">
-    <link rel="stylesheet" href="../CSS/simulador.css">
-    <link rel="stylesheet" href="../CSS/card.css">
+    <link rel="stylesheet" media="screen" href="../CSS/simulador-menu.css">
+    <link rel="stylesheet" media="screen" href="../CSS/footer.css">
+    <link rel="stylesheet" media="screen" href="../CSS/simulador.css">
+    <link rel="stylesheet" media="print" href="../CSS/simulador-print.css">
+    <link rel="stylesheet" media="screen" href="../CSS/card.css">
 
-    <script src="JavaScript/control-page.js"></script>
+    <script src="..\JS\simulador-control-page.js"></script>
     <script src="https://kit.fontawesome.com/90f13af5e4.js" crossorigin="anonymous"></script>
-   
 </head>
 
 <body>
     <header>
         <button class="fas fa-hamburger" onclick="openMenu()" id="open-menu-button"> </button>
         <div>
-            <h1 contentEditable="true" onkeypress="if (event.key == 'Backspace' || event.key == 'Delete') return true; else return (this.innerText.length <= 50 && event.key != 'Enter')">Título del experimento</h1>
+            <h1 contentEditable="true" onkeypress="document.title = this.innerText; if (event.key == 'Backspace' || event.key == 'Delete') return true; else return (this.innerText.length <= 50 && event.key != 'Enter')">Título del experimento</h1>
             <p>Creado por <em contentEditable="true" onkeypress="if (event.key == 'Backspace' || event.key == 'Delete') return true; else return (this.innerText.length <= 50 && event.key != 'Enter')">nombre</em></p>
         </div>
     </header>
@@ -107,26 +107,51 @@
                 <button class="fas fa-minus" onclick="hide(analisis)"></button>
             </div>
             <div class="section-main" id="analisis-main">
-                <div class="ediable-area">
-                    <h3 contenteditable="true"><button onclick="removeClone(this)">X</button> Hipotesis</h3>
-                    <textarea placeholder="Escribe tu Hipotesis inicial acerca del resultado de los experimentos."></textarea>
-                </div>
-                <div class="ediable-area">
-                    <h3 contenteditable="true"><button onclick="removeClone(this)">X</button> Conclusiones</h3>
-                    <textarea placeholder="Escribe un conclusión o un resumen de los resultado obtenido."></textarea>
+                
+                <div class="text-editor">
+                    <h3 contenteditable="true">Hipótesis</h3>
+
+                    <button title="Eliminar" class="removeClone" onclick="removeClone(this)">X</button>
+
+                    <button title="Negrilla" onclick="document.execCommand( 'bold',false,null);"><strong>b</strong></button>
+                    <button title="Cursiva" onclick="document.execCommand('italic',false,null);"><em>i</em></button>
+                    <button title="Subrayado" onclick="document.execCommand( 'underline',false,null);"><u>u</u></button>
+                    <button title="Tachado" onclick="document.execCommand( 'strikethrough', false, null)"><del>s</del></button>
+                  
+                    <button title="Lista no ordenada" onclick="document.execCommand( 'insertUnorderedList', false, null)"><span class="fas fa-list"></span></button>
+                    <button title="Lista ordenada" onclick="document.execCommand( 'insertOrderedList', false, null)"><span class="fas fa-list-ol"></span></button>
+                  
+                    <button title="Sub indice" onclick="document.execCommand( 'subscript', false, null)"><span class="fas fa-subscript"></span></button>
+                    <button title="Super indice" onclick="document.execCommand( 'superscript', false, null)"><span class="fas fa-superscript"></span></button>
+
+                    <div class="editor" contenteditable>Este contenido es editable, intenta escribir en el</div>
                 </div>
             </div>
             <div class="section-footer">
                 <button onclick="addEditableArea()">Añadir Elemento</button>
-                <button>Visualizar</button>
+                <button onclick="window.print()">Visualizar</button>
             </div>
         </section>
     </main>
 
     <template>
-        <div class="ediable-area">
-            <h3 contenteditable="true"><button onclick="removeClone(this)">X</button> Nuevo elemento</h3>
-            <textarea placeholder="Este es un nuevo elemento."></textarea>
+        <div class="text-editor">
+            <h3 contenteditable="true">Nuevo elemento</h3>
+
+            <button title="Eliminar" class="removeClone" onclick="removeClone(this)">X</button>
+
+            <button title="Negrilla" onclick="document.execCommand( 'bold',false,null);"><strong>b</strong></button>
+            <button title="Cursiva" onclick="document.execCommand('italic',false,null);"><em>i</em></button>
+            <button title="Subrayado" onclick="document.execCommand( 'underline',false,null);"><u>u</u></button>
+            <button title="Tachado" onclick="document.execCommand( 'strikethrough', false, null)"><del>s</del></button>
+                  
+            <button title="Lista no ordenada" onclick="document.execCommand( 'insertUnorderedList', false, null)"><span class="fas fa-list"></span></button>
+            <button title="Lista ordenada" onclick="document.execCommand( 'insertOrderedList', false, null)"><span class="fas fa-list-ol"></span></button>
+                  
+            <button title="Sub indice" onclick="document.execCommand( 'subscript', false, null)"><span class="fas fa-subscript"></span></button>
+            <button title="Super indice" onclick="document.execCommand( 'superscript', false, null)"><span class="fas fa-superscript"></span></button>
+
+            <div class="editor" contenteditable>Este contenido es editable, intenta escribir en el</div>
         </div>
     </template>
 

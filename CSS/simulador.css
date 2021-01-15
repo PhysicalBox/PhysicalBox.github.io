@@ -28,18 +28,16 @@ section {
     min-height: 200px;
     margin-top: 10px;
     margin-bottom: 20px;
-    border-radius: 5px;
-    border: 2px solid var(--LEVEL-COLOR);
+    border-radius: 2px;
+    border: 1px solid var(--SUB-LEVEL-COLOR);
     box-shadow: -1px 10px 30px -20px var(--DARK);
 }
-
 
 /*---------   HEADER OF SECTION   ---------*/
 
 .section-header {
     display: flex;
     overflow: hidden;
-    border-radius: 2.5px;
     background-color: var(--SUB-LEVEL-COLOR-trans);
     /* to avoid width bigger that secrean */
     box-sizing: border-box;
@@ -61,8 +59,7 @@ section {
     margin-left: auto;
     margin-right: 0;
     border: none;
-    border-left: 2px solid var(--LEVEL-COLOR);
-    background-color: var(--PINK-EMPHASIS);
+    background-color: var(--SUB-LEVEL-COLOR);
 }
 
 
@@ -78,24 +75,42 @@ section {
     box-sizing: border-box;
 }
 
-
 /* Analisis editable area */
-
-.ediable-area {
-    margin-top: 5px;
-    margin-bottom: 10px;
-    border: 2px solid var(--LEVEL-COLOR);
+div.text-editor {
+    margin-top: 20px;
 }
-
-.ediable-area>* {
-    width: 100%;
-    max-width: 100%;
-    border: none;
-    padding: 0;
-    margin: 0;
-}
-
-.ediable-area>textarea {
-    box-sizing: border-box;
+div.text-editor,
+div.editor {
+    border: 1px solid #607d8b !important;
     padding: 10px;
+}
+
+div.text-editor > h2 {
+    text-align: center;
+}
+
+div.text-editor button, .section-footer button {
+    border: none;
+    padding: 5px 10px 5px 10px;
+    cursor: pointer;
+}
+
+div.editor {
+    opacity: 0.5;
+    width: 100%;
+    margin-top: 10px;
+    box-sizing: border-box;
+    padding: 30px;
+    resize: vertical;
+    text-overflow: ellipsis;
+    overflow-y: scroll;
+}
+
+.removeClone {
+    background-color: var(--PINK-EMPHASIS);
+    color: var(--TEXT-COLOR);
+}
+div.editor:active, div.editor:focus{
+    background-color: #ffffff;
+    opacity: 1;
 }
